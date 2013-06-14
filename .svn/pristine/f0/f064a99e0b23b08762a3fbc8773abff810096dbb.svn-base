@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="pref_key_oel_percent"
+        android:summary="@string/blank"
+        android:title="@string/oel_percent" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_key_color_oel_percent"
+            android:summary="@string/highlight_oel_percent_summary"
+            android:title="@string/highlight_oel_percent" />
+
+        <ListPreference
+            android:defaultValue="50"
+            android:dependency="pref_key_color_oel_percent"
+            android:dialogTitle="@string/highlight_red"
+            android:entries="@array/percent_options_entries"
+            android:entryValues="@array/percent_options_values"
+            android:key="pref_key_show_red"
+            android:summary="@string/error"
+            android:title="@string/highlight_red" />
+        <ListPreference
+            android:defaultValue="25"
+            android:dependency="pref_key_color_oel_percent"
+            android:dialogTitle="@string/highlight_orange"
+            android:entries="@array/percent_options_entries"
+            android:entryValues="@array/percent_options_values"
+            android:key="pref_key_show_orange"
+            android:summary="@string/error"
+            android:title="@string/highlight_orange" />
+        <ListPreference
+            android:defaultValue="10"
+            android:dependency="pref_key_color_oel_percent"
+            android:dialogTitle="@string/highlight_yellow"
+            android:entries="@array/percent_options_entries"
+            android:entryValues="@array/percent_options_values"
+            android:key="pref_key_show_yellow"
+            android:summary="@string/error"
+            android:title="@string/highlight_yellow" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_oel_type"
+        android:summary="@string/blank"
+        android:title="@string/oel_type" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_key_color_oel_type"
+            android:summary="@string/highlight_oel_type_summary"
+            android:title="@string/highlight_oel_type" />
+
+        <ListPreference
+            android:defaultValue="30"
+            android:dependency="pref_key_color_oel_type"
+            android:dialogTitle="@string/highlight_stel"
+            android:entries="@array/duration_options_entries"
+            android:entryValues="@array/duration_options_values"
+            android:key="pref_key_highlight_stel"
+            android:summary="@string/error"
+            android:title="@string/highlight_stel" />
+        <ListPreference
+            android:defaultValue="5"
+            android:dependency="pref_key_color_oel_type"
+            android:dialogTitle="@string/highlight_c"
+            android:entries="@array/duration_options_entries"
+            android:entryValues="@array/duration_options_values"
+            android:key="pref_key_highlight_c"
+            android:summary="@string/error"
+            android:title="@string/highlight_c" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="pref_key_color_oel_type"
+            android:key="pref_key_oel_type_restrict"
+            android:summary="@string/highlight_oel_type_restrict_summary"
+            android:title="@string/highlight_oel_type_restrict" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

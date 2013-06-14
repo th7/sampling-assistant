@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hartland.sampling.assistant"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.hartland.sampling.assistant.AssistantApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:uiOptions="splitActionBarWhenNarrow" >
+        <activity
+            android:name="com.hartland.sampling.assistant.utilities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.hartland.sampling.assistant.WorkerService" >
+        </service>
+
+        <activity
+            android:name="com.hartland.sampling.assistant.PlanListActivity"
+            android:label="@string/title_activity_plan_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+        <activity
+            android:name="com.hartland.sampling.assistant.PlanEditActivity"
+            android:label="@string/title_activity_plan_edit" >
+        </activity>
+        <activity
+            android:name="com.hartland.sampling.assistant.MaterialSelectActivity"
+            android:label="@string/title_activity_material_select"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.hartland.sampling.assistant.MaterialDetailActivity"
+            android:label="@string/title_activity_material_detail" >
+        </activity>
+        <activity
+            android:name="com.hartland.sampling.assistant.PreferencesActivity"
+            android:theme="@style/PrefsTheme"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.hartland.sampling.assistant.OelEditActivity"
+            android:label="@string/title_activity_edit_oel"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+        </activity>
+    </application>
+
+</manifest>

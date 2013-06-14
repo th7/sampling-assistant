@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <Button
+        android:id="@+id/buttonMainSelectFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:text="@string/select_file" />
+
+    <TextView
+        android:id="@+id/textViewMainSelectedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonMainSelectFile"
+        android:text="@string/selected"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewMainSelectedFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewMainSelectedLabel"
+        android:text="@string/none_selected"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/buttonMainParse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewMainSelectedFile"
+        android:onClick="onClick"
+        android:text="@string/parse_selected" />
+
+    <TextView
+        android:id="@+id/textViewMainParsedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonMainParse"
+        android:text="@string/parsed_caps"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textViewMainParsedFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewMainParsedLabel"
+        android:text="@string/none_parsed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinnerMainTables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewMainParsedFile"
+        android:prompt="@string/select_table" />
+
+    <Button
+        android:id="@+id/buttonMainInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerMainTables"
+        android:onClick="onClick"
+        android:text="@string/insert" />
+
+    <Button
+        android:id="@+id/buttonMainTestQuery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="onClick"
+        android:text="@string/test_query" />
+
+    <Button
+        android:id="@+id/buttonMainStartApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick"
+        android:text="@string/start_app" />
+
+    <Button
+        android:id="@+id/buttonMainParseInsertAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonMainInsert"
+        android:layout_alignBottom="@+id/buttonMainInsert"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick"
+        android:text="@string/parse_insert_all" />
+
+    <Button
+        android:id="@+id/buttonMainExportDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:text="@string/export_db" />
+
+</RelativeLayout>

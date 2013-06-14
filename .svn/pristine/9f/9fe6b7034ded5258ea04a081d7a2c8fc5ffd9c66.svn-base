@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:id="@+id/menuMainSettings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    
+    <item android:id="@+id/menuMainNuke"
+        android:title="@string/nuke"
+        android:orderInCategory="200"
+        android:showAsAction="never" />
+    
+    <item android:id="@+id/menuMainDropTable"
+        android:title="@string/drop_table"
+        android:orderInCategory="300"
+        android:showAsAction="never" />
+</menu>

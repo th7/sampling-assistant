@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMaterialSelectHeaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ab_solid_redbrown"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewMaterialSelectName"
+            style="@style/TextViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="@string/material_name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewMaterialSelectCas"
+            style="@style/TextViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/cas"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutMaterialSelectSearch"
+        android:layout_below="@+id/linearLayoutMaterialSelectHeaders"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:choiceMode="multipleChoice"
+            android:drawSelectorOnTop="false" />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_materials" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMaterialSelectSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonMaterialSelectDone"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editTextMaterialSelectSearchName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="@string/name" />
+
+        <EditText
+            android:id="@+id/editTextMaterialSelectSearchCas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="@string/cas" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMaterialSelectSelected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:visible="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonMaterialSelectDone"
+        style="@style/RedBrownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="onClick"
+        android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/textViewMaterialSelectFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonMaterialSelectDone"
+        android:layout_toRightOf="@+id/buttonMaterialSelectDone"
+        android:paddingRight="5dp"
+        android:text="@string/filters_semi_colon" />
+
+    <TextView
+        android:id="@+id/textViewMaterialSelectFiltersNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewMaterialSelectFilters"
+        android:layout_toRightOf="@+id/textViewMaterialSelectFilters"
+        android:paddingRight="5dp"
+        android:text="@string/none" />
+
+    <TextView
+        android:id="@+id/textViewMaterialSelectFiltersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewMaterialSelectFiltersNone"
+        android:layout_toRightOf="@+id/textViewMaterialSelectFiltersNone"
+        android:paddingRight="5dp"
+        android:text="@string/name"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewMaterialSelectFiltersCas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewMaterialSelectFiltersName"
+        android:layout_toRightOf="@+id/textViewMaterialSelectFiltersName"
+        android:paddingRight="5dp"
+        android:text="@string/cas"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewMaterialSelectFiltersSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewMaterialSelectFiltersCas"
+        android:layout_toRightOf="@+id/textViewMaterialSelectFiltersCas"
+        android:text="@string/selected"
+        android:visibility="gone" />
+
+</RelativeLayout>

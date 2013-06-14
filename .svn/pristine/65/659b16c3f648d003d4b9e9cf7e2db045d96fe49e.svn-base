@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPlanListHeaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ab_bottom_solid_redbrown" >
+
+        <TextView
+            android:id="@+id/textViewPlanListName"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/plan_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:context=".PlanListActivity" />
+
+        <TextView
+            android:id="@+id/textViewPlanListEdited"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/last_edited"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:context=".PlanListActivity" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextPlanListSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/buttonPlanListNewPlan"
+        android:layout_toLeftOf="@+id/buttonPlanListNewPlan"
+        android:hint="@android:string/search_go" />
+
+    <Button
+        android:id="@+id/buttonPlanListNewPlan"
+        style="@style/RedBrownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick"
+        android:text="@string/new_plan" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonPlanListNewPlan"
+        android:layout_below="@+id/relativeLayoutPlanListHeaders"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false" />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_plans" />
+    </LinearLayout>
+
+</RelativeLayout>
